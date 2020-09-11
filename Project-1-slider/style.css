@@ -1,8 +1,9 @@
 .carousel {
   position: relative;
-  height: 90vh;
-  width: 80%;
+  height: 80vh;
+  width: 65%;
   margin: 0 auto;
+  padding: 20px;
 }
 .carousel__img {
   width: 100%;
@@ -16,6 +17,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  box-shadow: 2px 2px rgba(81, 82, 71, 0.965);
 }
 .carousel__track {
   padding: 0;
@@ -52,15 +54,20 @@
   border-radius: 50%;
   width: 15px;
   height: 15px;
-  background: rgb(105, 62, 88);
+  background: black;
   margin: 0 12px;
 }
 .carousel__nav {
-  background: lavenderblush;
+  background: white;
   display: flex;
   justify-content: center;
   padding: 15px 0;
+  box-shadow: 2px 2px rgba(81, 82, 71, 0.965);
 }
 .carousel__indicator .current--slider {
-  background: rgb(105, 62, 88);
+  background: black;
+}
+.carousel__indicator:hover {
+  background: gray;
+  cursor: pointer;
 }
