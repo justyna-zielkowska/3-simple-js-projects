@@ -2,12 +2,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
 }
 
 .container {
   margin: 20px auto;
   box-sizing: border-box;
-  padding: 50px;
+  padding: 70px;
   flex-flow: column;
   border: 8px dotted red;
   background-color: pink;
