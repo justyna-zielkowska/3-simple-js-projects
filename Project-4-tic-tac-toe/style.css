@@ -1,0 +1,24 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 300px;
+  height: 300px;
+  border: solid black;
+  position: absolute;
+  left: 33%;
+}
+
+.grid div {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.playerX {
+  background-image: url(img/788522.svg);
+}
+
+.player0 {
+  background-image: url(img/748122.svg);
+}
