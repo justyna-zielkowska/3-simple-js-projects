@@ -1,7 +1,7 @@
 const div = document.querySelector("#root");
 
 const element = document.createElement("textarea");
-element.classList.add = "textarea";
+element.classList.add("textarea");
 element.setAttribute(
   "style",
   "border-color: black; border-width: 2px, border-style: solid; padding: 10px; margin: 10px"
@@ -12,7 +12,7 @@ div.appendChild(element);
 
 //tworzę listę nienumerowaną notatek
 const list = document.createElement("ul");
-list.classList.add = "list";
+list.classList.add("list");
 list.innerText = "";
 
 div.appendChild(list);
@@ -32,7 +32,12 @@ button.addEventListener("click", function () {
       "style",
       "list-style-type: none; display: flex; justify-content: space-between; border-color: black; border-style: solid; border-width: 1px; padding: 10px; margin: 16px"
     );
-    newEl.innerText = element.value;
+
+    const newElementParagraph = document.createElement("p");
+    newElementParagraph.innerText = element.value;
+    localStorage.setItem("newEl", newElementParagraph.innerText); //dziala tutakj
+    newEl.appendChild(newElementParagraph);
+
     element.value = "";
 
     const editButton = document.createElement("button");
@@ -40,8 +45,10 @@ button.addEventListener("click", function () {
     newEl.appendChild(editButton);
 
     editButton.addEventListener("click", function () {
-      localStorage.setItem("newEl", newEl.innerText); //poprawic zeby nie dodawały sie buttony
-      if (localStorage.getItem("newEl") !== 0) {
+      // window.localStorage.setItem("newEl", newElementParagraph.innerText);
+
+      const newElementStorage = localStorage.getItem("abcd");
+      if (localStorage.getItem("newEl") !== null) {
         element.value = localStorage.getItem("newEl");
         localStorage.removeItem("newEl");
         list.removeChild(newEl);
